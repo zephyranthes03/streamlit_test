@@ -1,7 +1,8 @@
 import telegram
 import telebot
+import os
 
-bot = telebot.TeleBot("7439567925:AAGjEEXzSFO_DwDlfaQ6uZ8jGKy25sx8rKI")
+bot = telebot.TeleBot(os.getenv("TELEGRAM_API"))
 
 @bot.message_handler(commands=['info'])
 def send_welcome(message):
