@@ -1,3 +1,4 @@
+import os
 import asyncio
 import sqlite3
 from aiogram import Bot, Dispatcher, types, F
@@ -7,8 +8,7 @@ from aiogram import Router
 from datetime import datetime
 
 # 봇 토큰을 여기에 입력하세요
-API_TOKEN = 'YOUR_BOT_API_TOKEN'
-API_TOKEN = "7146884682:AAGlkBMN1AAwcLsuQQ50_7IQd5R5EvSZZ0I"
+API_TOKEN = os.getenv("BOT_TOKEN")
 
 # 봇 설정
 bot = Bot(token=API_TOKEN)
