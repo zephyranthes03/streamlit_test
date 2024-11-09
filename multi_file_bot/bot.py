@@ -4,6 +4,7 @@ from os import getenv
 
 from handlers.echo import echo_router
 from handlers.start import start_router
+from handlers.claim import claim_router
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
@@ -19,6 +20,7 @@ async def main() -> None:
     # Register all the routers from handlers package
     dp.include_routers(
         start_router,
+        claim_router,
         echo_router,
     )
 
